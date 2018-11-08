@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memove.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 16:55:25 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/08 19:30:01 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/08 18:47:01 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/08 19:29:55 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* a verifier*/
-#include <strings.h>
+#include <string.h>
 
-void	bzero(void *src, size_t n)
+void		*ft_memmove(void *dest, const void *src, size_t len)
 {
-	int i;
+	int		i;
+	char	*mysrc = (char *)src;
 
-	i = 0;
-	while (i < n)
+	if (dest > mysrc)
 	{
-		((char *)src)[i] = '\0';
-		i++;
+		i = len - 1;
+		while (len > 0)
+		{
+			((char *)dest)[i] = mysrc[i];
+			i--;
+		}
 	}
-	return (src);
+	else
+	{
+		while (i < len)
+		{
+			((char *)dest)[i] = mysrc[i];
+			i++;
+		}
+	}
 }
