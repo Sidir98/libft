@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/11 14:55:30 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/15 16:32:38 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/13 14:50:35 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/15 16:04:00 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	int		i;
+	int		k;
 	char	*mysrc;
 
-	mysrc = (char *)src;
-	if (dest > src)
+	mysrc = (char*)src;
+	i = 0;
+	k = 0;
+	while (mysrc[i] != c && i < (int)n)
 	{
-		i = len - 1;
-		while (i > 0)
-		{
-			((char *)dest)[i] = mysrc[i];
-			i--;
-		}
+		i++;
 	}
-	else
+	i++;
+	while (i < (int)n)
 	{
-		i = 0;
-		while (i < (int)len)
-		{
-			((char *)dest)[i] = mysrc[i];
-			i++;
-		}
+		((char *)dest)[k] = mysrc[i];
+		k++;
+		i++;
 	}
+	((char *)dest)[k] = '\0';
 	return (dest);
 }
