@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:22:12 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/16 15:33:23 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/16 18:55:04 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,8 @@ char	*ft_strstr(char *str, char *to_find);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		isascii(int c);
 #endif

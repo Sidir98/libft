@@ -6,12 +6,11 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 12:36:50 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/16 15:29:03 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/16 17:15:19 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t n)
 {

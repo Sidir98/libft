@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/09 20:30:27 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/16 11:19:38 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/16 17:16:51 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_strncmp(char *src, char *dest, unsigned int n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (src[i] != '\0' && i < (int)n)
+	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src[i];
 		i++;

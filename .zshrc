@@ -104,5 +104,6 @@ alias frm="sh ~/Documents/script/frm.sh"
 alias fcode="sh ~/Documents/script/fcode.sh"
 alias fls="sh ~/Documents/script/fls.sh"
 alias flsl="sh ~/Documents/script/flsl.sh"
+alias grademe="sh ~/Libftest/grademe.sh"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
