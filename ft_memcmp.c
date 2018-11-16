@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 17:01:34 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/16 10:52:41 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/16 10:37:15 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/16 12:31:06 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	char	*mysrc;
+	int				i;
+	unsigned char	*mys1;
+	unsigned char	*mys2;
 
-	mysrc = (char*)src;
+	mys1 = (unsigned char*)s1;
+	mys2 = (unsigned char*)s2;
 	i = 0;
-	while (i < (int)n)
+	while (i < (int)n && mys1[i] == mys2[i])
 	{
-		((char *)dest)[i] = mysrc[i];
 		i++;
 	}
-	return (dest);
+	return (mys1[i] - mys2[i]);
 }
