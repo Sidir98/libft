@@ -1,19 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 18:53:29 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/17 14:07:54 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/17 14:55:54 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/17 16:07:35 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *src, int c)
 {
-	if (c >= 0 && c <= 177)
-		return (c);
-	else
-		return (0);
+	char	*mysrc;
+	char	*ptr;
+	int		i;
+
+	i = 0;
+	ptr = NULL;
+	mysrc = (char*)src;
+	while (mysrc[i] != '\0')
+	{
+		if (mysrc[i] == c)
+		{
+			ptr = &mysrc[i];
+		}
+		i++;
+	}
+	if (mysrc[i] == c)
+	{
+		ptr = &mysrc[i];
+	}
+	return (ptr);
 }

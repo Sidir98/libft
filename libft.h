@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:22:12 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/16 18:55:04 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/17 15:59:06 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,10 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
-int		isascii(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+//char	*ft_strchr(const char *src, int c);
+char	*ft_strrchr(const char *src, int c);
 #endif
