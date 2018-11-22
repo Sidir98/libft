@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 18:30:32 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/17 17:36:12 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/22 14:57:08 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/22 16:10:49 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+void	ft_putnbr(int n)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
+	unsigned int tmp;
+
+	if (n < 0)
+	{
+		ft_putchar('-');
+		tmp = -n;
+	}
 	else
-		return (0);
+		tmp = n;
+	if (tmp >= 10)
+	{
+		ft_putnbr(tmp / 10);
+	}
+	ft_putchar('0' + tmp % 10);
 }

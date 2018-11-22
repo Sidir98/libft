@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 18:30:32 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/17 17:36:12 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/20 10:19:57 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/20 12:07:02 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	else
-		return (0);
+	char	*mys1;
+	char	*mys2;
+
+	mys1 = (char*)s1;
+	mys2 = (char*)s2;
+	return (ft_strcat(ft_strcpy(ft_strnew(ft_strlen(mys1)\
+	+ ft_strlen(mys2)), mys1), mys2));
 }

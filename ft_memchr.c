@@ -6,23 +6,24 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 19:52:51 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/11 18:00:09 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/18 16:54:10 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *src, int c, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*mysrc;
 
 	mysrc = (char*)src;
 	i = 0;
-	while (c != mysrc[i] && i < (int)n)
+	while (i < n)
+	{
+		if (mysrc[i] == c)
+			return (&mysrc[i]);
 		i++;
-	if (mysrc[i] == (unsigned char)c)
-		return (mysrc + i);
-	else
-		return (0);
+	}
+	return (0);
 }

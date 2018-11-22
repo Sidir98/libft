@@ -6,14 +6,15 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 18:53:29 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/17 14:07:54 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/17 17:35:29 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 177)
-		return (c);
-	else
-		return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

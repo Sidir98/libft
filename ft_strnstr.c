@@ -1,19 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 18:30:32 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/17 17:36:12 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/17 16:48:03 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/17 16:56:16 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+char	*ft_strnstr(char *str, char *to_find, size_t n)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	else
-		return (0);
+	size_t	i;
+	size_t	j;
+	size_t	max;
+
+	i = 0;
+	j = 0;
+	max = ft_strlen(to_find);
+	if (max <= 0)
+		return (str);
+	while (str[i] && i < n)
+	{
+		j = 0;
+		while (str[i + j] == to_find[j] && i + j < n)
+		{
+			j++;
+			if (j == max)
+				return (&str[i]);
+		}
+		i++;
+	}
+	return (0);
 }

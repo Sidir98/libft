@@ -1,19 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 18:30:32 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/17 17:36:12 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/20 17:48:52 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/22 14:42:27 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+char	*ft_itoa(int n)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	else
-		return (0);
+	size_t			length;
+	unsigned int	tmp;
+	char			*str;
+
+	tmp = ((n < 0) ? -n : n);
+	length = ((n < 0) ? 2 : 1);
+	while (tmp)
+	{
+		tmp = tmp / 10;
+		length++;
+	}
+	str = ft_strnew(length);
+	length--;
+	str[0] = ((n < 0) ? '-' : '0');
+	tmp = ((n < 0) ? -n : n);
+	while (tmp && length--)
+	{
+		str[length] = '0' + tmp % 10;
+		tmp = tmp / 10;
+	}
+	return (str);
 }
