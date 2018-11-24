@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstaddafter.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 19:06:20 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/23 17:02:50 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/23 19:33:31 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/23 19:49:14 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstaddafter(t_list **alst, t_list *new)
 {
+	t_list *m;
+	t_list *tmp;
+
+	m = *alst;
 	if (*alst == NULL)
 		*alst = new;
-	else
+	else if (m->next == NULL)
+		m->next = new;
+	else if (m->next)
 	{
-		new->next = *alst;
-		*alst = new;
+		tmp = m->next;
+		m->next = new;
+		new->next = tmp;
 	}
 }

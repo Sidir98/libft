@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 19:06:20 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/23 17:02:50 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/23 16:58:51 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/23 17:03:24 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	if (*alst == NULL)
-		*alst = new;
-	else
+	t_list *m;
+
+	m = lst;
+	while (m != NULL)
 	{
-		new->next = *alst;
-		*alst = new;
+		f(m);
+		m = m->next;
 	}
 }

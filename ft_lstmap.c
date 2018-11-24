@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 19:06:20 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/23 17:02:50 by ibouabda         ###   ########.fr       */
+/*   Created: 2018/11/23 17:03:51 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/23 19:53:05 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	if (*alst == NULL)
-		*alst = new;
-	else
+	t_list *m;
+	t_list *newm;
+
+	m = lst;
+	while (m != NULL)
 	{
-		new->next = *alst;
-		*alst = new;
+		ft_lstaddend(&newm, ft_lstnew(f(m)->content, f(m)->content_size));
+		m = m->next;
 	}
+	return (newm);
 }
