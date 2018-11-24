@@ -6,13 +6,13 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 17:45:01 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/20 17:45:03 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/24 10:50:44 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		ft_mesure_index(char *str, char c)
+static int	ft_mesure_index(char *str, char c)
 {
 	int i;
 	int j;
@@ -37,7 +37,7 @@ int		ft_mesure_index(char *str, char c)
 	return (j);
 }
 
-char	**ft_fill_index(char **index, char *str, char c)
+static char	**ft_fill_index(char **index, char *str, char c)
 {
 	int		i;
 	int		j;
@@ -64,7 +64,7 @@ char	**ft_fill_index(char **index, char *str, char c)
 	return (index);
 }
 
-char	**ft_malloc_str(char **index, char *str, char c)
+static char	**ft_malloc_str(char **index, char *str, char c)
 {
 	int		i;
 	int		j;
@@ -93,7 +93,7 @@ char	**ft_malloc_str(char **index, char *str, char c)
 	return (index);
 }
 
-char	**ft_strsplit(char *str, char c)
+char		**ft_strsplit(char *str, char c)
 {
 	char	**index;
 	int		j;

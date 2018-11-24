@@ -6,13 +6,13 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 14:55:30 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/19 16:50:20 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/24 10:50:55 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*increase(void *dest, const void *src, size_t n)
+void static	*increase(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 	char	*mysrc;
@@ -29,7 +29,7 @@ void	*increase(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-void	*decrease(void *dest, const void *src, size_t n)
+void static	*decrease(void *dest, const void *src, size_t n)
 {
 	int		i;
 	char	*mysrc;
@@ -46,7 +46,7 @@ void	*decrease(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void		*ft_memmove(void *dest, const void *src, size_t n)
 {
 	if (dest == src)
 		return (dest);

@@ -1,17 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/24 10:38:49 by ibouabda          #+#    #+#             */
+/*   Updated: 2018/11/24 17:35:22 by ibouabda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
-int main()
+int main(void)
 {
-	t_list *list;
-	char str[] = "lorem";
-	char str2[] = "On est la";
-	
-	list = ft_lstmanynew(10, str, sizeof(str));
-	ft_lstaddafter(&list, ft_lstnew(str2, sizeof(str2)));
-	ft_putstrlst(list);
-	printf("%zi\n",ft_lstlen(list));
 	return (0);
 }
