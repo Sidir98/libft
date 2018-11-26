@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 17:45:01 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/24 10:50:44 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/26 16:25:35 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ static int	ft_mesure_index(char *str, char c)
 
 static char	**ft_fill_index(char **index, char *str, char c)
 {
-	int		i;
-	int		j;
-	int		k;
+	int i;
+	int j;
+	int k;
 
 	i = 0;
 	j = 0;
@@ -66,9 +66,9 @@ static char	**ft_fill_index(char **index, char *str, char c)
 
 static char	**ft_malloc_str(char **index, char *str, char c)
 {
-	int		i;
-	int		j;
-	int		k;
+	int i;
+	int j;
+	int k;
 
 	i = 0;
 	j = 0;
@@ -87,7 +87,7 @@ static char	**ft_malloc_str(char **index, char *str, char c)
 				k++;
 				i++;
 			}
-			index[j++] = (char*)malloc(sizeof(char) * (k));
+			index[j++] = (char *)malloc(sizeof(char) * (k));
 		}
 	}
 	return (index);
@@ -98,10 +98,14 @@ char		**ft_strsplit(char *str, char c)
 	char	**index;
 	int		j;
 
-	j = ft_mesure_index(str, c);
-	if (!(index = (char**)malloc(sizeof(char*) * (j + 1))))
-		return (0);
-	index[j] = 0;
-	index = ft_malloc_str(index, str, c);
-	return (ft_fill_index(index, str, c));
+	if (str)
+	{
+		j = ft_mesure_index(str, c);
+		if (!(index = (char **)malloc(sizeof(char *) * (j + 1))))
+			return (0);
+		index[j] = 0;
+		index = ft_malloc_str(index, str, c);
+		return (ft_fill_index(index, str, c));
+	}
+	return (NULL);
 }

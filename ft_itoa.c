@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 17:48:52 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/22 14:42:27 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/26 14:45:02 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ char	*ft_itoa(int n)
 		tmp = tmp / 10;
 		length++;
 	}
-	str = ft_strnew(length);
+	if (!(str = ft_strnew(length)))
+		return (NULL);
 	length--;
 	str[0] = ((n < 0) ? '-' : '0');
 	tmp = ((n < 0) ? -n : n);

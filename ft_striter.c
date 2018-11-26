@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 17:25:53 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/19 17:33:58 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/26 16:24:07 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	size_t	i;
+	size_t i;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (s && f)
 	{
-		f(&s[i]);
-		i++;
+		i = 0;
+		while (s[i] != '\0')
+		{
+			f(&s[i]);
+			i++;
+		}
 	}
 }

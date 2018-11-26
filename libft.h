@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:22:12 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/23 19:55:54 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/26 15:42:48 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strcat(char *dest, char *src);
 int					ft_strcmp(char *s1, char *s2);
 char				*ft_strcpy(char *dest, char *src);
-int					ft_strlen(char *str);
+size_t				ft_strlen(char *str);
 char				*ft_strncat(char *dest, char *src, int nb);
 int					ft_strncmp(char *src, char *dest, unsigned int n);
 int					ft_strncmp(char *src, char *dest, unsigned int n);

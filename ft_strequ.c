@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 19:02:41 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/19 19:06:53 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/26 16:15:37 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	return (ft_strcmp((char*)s1, (char*)s2) == 0);
+	if (s1 && s2)
+		return (ft_strcmp((char*)s1, (char*)s2) == 0);
+	return (0);
 }
