@@ -6,11 +6,11 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/09 10:14:36 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/16 11:21:59 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/27 14:53:16 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, const char *src)
 {
 	int i;
 

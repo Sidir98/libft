@@ -6,13 +6,13 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/09 10:14:36 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/16 11:20:11 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/27 15:01:16 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(const char *str, const char *to_find)
 {
 	int	i;
 	int	j;
@@ -30,7 +30,7 @@ char	*ft_strstr(char *str, char *to_find)
 		{
 			j++;
 			if (j == max)
-				return (&str[i]);
+				return (&((char*)str)[i]);
 		}
 		i++;
 	}

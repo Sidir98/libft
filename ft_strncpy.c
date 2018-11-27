@@ -6,15 +6,15 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/15 11:56:52 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/26 14:28:16 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/27 14:59:00 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	while (i < n && src[i] != '\0')

@@ -6,11 +6,11 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/07 09:51:37 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/26 13:28:31 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/27 14:38:23 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int		i;
 	int		nb;

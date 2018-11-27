@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:22:12 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/26 15:42:48 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/27 15:01:34 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,22 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int					ft_atoi(char *str);
+int					ft_atoi(const char *str);
 void				ft_bzero(void *src, size_t n);
 void				*ft_memchr(const void *src, int c, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t len);
 void				*ft_memset(void *src, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
-char				*ft_strcat(char *dest, char *src);
-int					ft_strcmp(char *s1, char *s2);
-char				*ft_strcpy(char *dest, char *src);
+char				*ft_strcat(char *dest, const char *src);
+int					ft_strcmp(const char *s1, const char *s2);
+char				*ft_strcpy(char *dest, const char *src);
 size_t				ft_strlen(char *str);
-char				*ft_strncat(char *dest, char *src, int nb);
-int					ft_strncmp(char *src, char *dest, unsigned int n);
-int					ft_strncmp(char *src, char *dest, unsigned int n);
-char				*ft_strncpy(char *dest, char *src, unsigned int n);
-char				*ft_strstr(char *str, char *to_find);
-char				*ft_strnstr(char *str, char *to_find, size_t n);
+char				*ft_strncat(char *dest, const char *src, size_t nb);
+int					ft_strncmp(const char *src, const char *dest, size_t n);
+char				*ft_strncpy(char *dest, const char *src, size_t n);
+char				*ft_strstr(const char *str, const char *to_find);
+char				*ft_strnstr(const char *str, const char *to_find, size_t n);
 char				*ft_strdup(const char *s1);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
