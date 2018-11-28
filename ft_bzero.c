@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:55:25 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/17 14:02:34 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/28 13:28:44 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_bzero(void *src, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (i < (int)n)
+	while (i < n)
 	{
 		((char *)src)[i] = '\0';
 		i++;

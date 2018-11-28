@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 14:50:41 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/22 14:53:33 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/28 13:35:06 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	ft_putstr(char const *s)
 
 	i = 0;
 	while (s[i])
-	{
-		ft_putchar(s[i]);
 		i++;
-	}
+	write(1, &s, i + 1);
 }

@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 14:42:02 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/19 16:51:07 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/28 13:30:48 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memalloc(size_t size)
 	size_t	i;
 
 	i = 0;
-	if (!(str = malloc(size)))
+	if (!(str = (char*)malloc(sizeof(char) * size)))
 	{
 		return (NULL);
 	}
