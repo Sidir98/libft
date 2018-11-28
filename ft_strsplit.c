@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 17:45:01 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/26 16:25:35 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/28 13:19:36 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,8 @@ static char	**ft_malloc_str(char **index, char *str, char c)
 				k++;
 				i++;
 			}
-			index[j++] = (char *)malloc(sizeof(char) * (k));
+			if (!(index[j++] = (char *)malloc(sizeof(char) * (k))))
+				return (NULL);
 		}
 	}
 	return (index);
