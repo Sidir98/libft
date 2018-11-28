@@ -6,13 +6,13 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 08:11:52 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/26 15:42:22 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/28 15:11:18 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	char	c;
 	size_t	i;

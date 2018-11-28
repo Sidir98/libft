@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 17:45:01 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/28 13:19:36 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/28 17:34:19 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,7 @@ static char	**ft_malloc_str(char **index, char *str, char c)
 	while (str[i])
 	{
 		while ((str[i] == c) && str[i])
-		{
 			i++;
-		}
 		if (str[i])
 		{
 			k = 0;

@@ -6,7 +6,7 @@
 #    By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 21:31:16 by ibouabda          #+#    #+#              #
-#    Updated: 2018/11/27 15:50:52 by ibouabda         ###   ########.fr        #
+#    Updated: 2018/11/28 17:14:51 by ibouabda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME = libft.a
 
 CFLAGS = -Wall -Werror -Wextra
 
-SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isprint.c ft_isdigit.c \
+CC = gcc
+
+SRC_NAME = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isprint.c ft_isdigit.c \
 		ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_memalloc.c \
 		ft_lstmap.c ft_lstnew.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c \
 		ft_memmove.c ft_memset.c ft_itoa.c ft_putchar_fd.c ft_putendl.c \
@@ -27,16 +29,16 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isprint.c ft_isdigit.c \
 		ft_strtrim.c ft_tolower.c ft_toupper.c ft_lstlen.c ft_lstmanynew.c\
 		ft_strsplit.c ft_isascii.c ft_lstaddafter.c ft_lstaddend.c ft_putstrlst.c
 
-OBJ = $(SRC:.c=.o)
+OBJ_NAME = $(SRC_NAME:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(CFLAGS) -c $(SRC)
-	ar rc $(NAME) $(OBJ)
+$(NAME): $(OBJ_NAME)
+	gcc $(CFLAGS) -c $(SRC_NAME)
+	ar rc $(NAME) $(OBJ_NAME)
 	ranlib $(NAME)
 clean:
-	/bin/rm -f $(OBJ)
+	/bin/rm -f $(OBJ_NAME)
 fclean: clean
 	/bin/rm -f $(NAME)
 

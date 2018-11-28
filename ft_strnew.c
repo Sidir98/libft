@@ -6,11 +6,12 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 16:51:45 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/26 13:39:58 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/28 15:14:29 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strnew(size_t size)
 {

@@ -6,11 +6,12 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 14:42:02 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/28 13:30:48 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/28 14:55:00 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memalloc(size_t size)
 {

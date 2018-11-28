@@ -6,7 +6,7 @@
 /*   By: ibouabda <ibouabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:22:12 by ibouabda          #+#    #+#             */
-/*   Updated: 2018/11/28 13:14:18 by ibouabda         ###   ########.fr       */
+/*   Updated: 2018/11/28 14:31:52 by ibouabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 # define LIBFT_H
 
-# include <stdlib.h>
 # include <string.h>
-# include <unistd.h>
 
 typedef	struct		s_list
 {
